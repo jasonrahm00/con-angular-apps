@@ -1,0 +1,31 @@
+<h2>FTE by Semester</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">FTE%</th>
+      <th scope="col">Semester</th>
+      <th scope="col">Year</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let data of fteData.data">
+        <td>
+          <span *ngIf="data.fte">{{ data.fte }}</span>
+          <span *ngIf="!data.fte">N/A</span>
+        </td>
+        <td>
+          <span *ngIf="data.semester === '7' ">Fall</span>
+          <span *ngIf="data.semester === '1' ">Spring</span>
+          <span *ngIf="data.semester === '4' ">Summer</span>
+        </td>
+        <td>
+          <span *ngIf="data.year">{{ data.year }}</span>
+          <span *ngIf="!data.year">N/A</span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"><strong *ngIf="fteData.fteAvg">{{ fteData.fteAvg }}</strong> Annualized FTE</td>
+      </tr>
+  </tbody>
+
+</table>

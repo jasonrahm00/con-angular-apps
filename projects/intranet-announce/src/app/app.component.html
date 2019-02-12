@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<section>
+
+  <h2>Announcements</h2>
+
+  <div class="flex-container">
+
+    <div id="display">
+      <div id="loadingMessage" *ngIf="!dataLoaded && !loadError">
+        <div>
+          <p>Loading Announcements</p>
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <div class="load-message" *ngIf="loadError">
+        <div>
+          <p>Unable to Load Announcements</p>
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <section id="filters">
+      <h3>Filter Announcements</h3>
+    </section>
+
+  </div>
+</section>

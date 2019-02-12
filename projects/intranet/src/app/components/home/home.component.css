@@ -1,0 +1,49 @@
+header {
+  margin-bottom: 3rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main > * {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+main > *:last-child {
+  margin-bottom: 0;
+}
+
+.social-feeds .image-wrapper {
+  max-width: 350px;
+}
+
+.social-feeds > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media all and (min-width: 925px) {
+  main {
+    justify-content: space-between;
+  }
+
+  main > * {
+    width: 45%;
+  }
+
+  main > .social-feeds {
+    width: 100%;
+  }
+
+  .social-feeds > div {
+    justify-content: space-around;
+  }
+
+  .social-feeds > div:first-child {
+    margin-right: 10%;
+  }
+
+}

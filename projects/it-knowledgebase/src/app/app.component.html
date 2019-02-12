@@ -1,0 +1,46 @@
+<div *ngIf="!dataLoaded">
+  <h2 class="center">Loading...</h2>
+  <div class="spinner"></div>
+</div>
+
+<div class="flex-container between" *ngIf="dataLoaded">
+  <aside class="width-20">
+    <h2>Refine Results</h2>
+
+    <label for="All" [class.active]="selectedFilter === 'All' ? true : false">
+      <input name="category" id="All" type="radio" value="All" checked (change)="onSelectionChange('All')">All
+    </label>
+
+    <label for="{{ x }}"
+           *ngFor="let x of filterValues"
+           [class.active]="selectedFilter === x ? true : false">
+      <input name="category" type="radio"
+             id="{{ x }}"
+             [value]="x"
+             (change)="onSelectionChange(x)">{{ x }}
+    </label>
+
+  </aside>
+
+  <article class="width-75">
+    <h2>Available Guides</h2>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th class="width-50">Guide</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let x of filteredKnowledge">
+          <td><a href="{{ x.url }}" target="_blank">{{ x.title }} <span *ngIf="x.url.indexOf('pdf') > -1">(PDF)</span></a></td>
+          <td>{{ x.category }}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </article>
+</div>
+

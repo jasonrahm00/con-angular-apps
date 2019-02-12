@@ -1,0 +1,82 @@
+[
+  {
+    url: 'https://forms.ucdenver.edu/secure/con_equipment_loan_request',
+    name: 'Equipment Loan Request',
+    clicks: 0,
+    fileType: 'page'
+  },
+  {
+    url: 'https://forms.ucdenver.edu/secure/con_travel_request_form',
+    name: 'Travel Request',
+    clicks: 0,
+    fileType: 'page'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/human-resources/Documents/con-phone-list.pdf',
+    name: 'CON Phone List',
+    clicks: 0,
+    fileType: 'pdf'
+  },
+  {
+    url: 'https://forms.ucdenver.edu/secure/desk_copy_request',
+    name: 'Desk Copy Request',
+    clicks: 0,
+    fileType: 'page'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/faculty-affairs/Documents/letterhead-template.pdf',
+    name: 'CON Letterhead Template',
+    clicks: 0,
+    fileType: 'pdf'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/faculty-affairs/Documents/cv-guidelines.docx',
+    name: 'CV Guidelines',
+    clicks: 0,
+    fileType: 'doc'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/standing-committees/apt/Documents/CV%20Format%20Sample.docx',
+    name: 'CV Format Sample',
+    clicks: 0,
+    fileType: 'doc'
+  },
+  {
+    url: 'https://ucconit.zendesk.com/hc/en-us/requests/new?ticket_form_id=44634',
+    name: 'General IT Request',
+    clicks: 0,
+    fileType: 'page'
+  },
+  {
+    url: 'https://forms.ucdenver.edu/secure/con_access_request',
+    name: 'Access Request',
+    clicks: 0,
+    fileType: 'page'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/faculty-affairs/Documents/faculty-bylaws.pdf',
+    name: 'Faculty Affairs Bylaws',
+    clicks: 0,
+    fileType: 'pdf'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/academic-programs/Documents/course-proposal-process-approval.pdf',
+    name: 'Course Proposal Process',
+    clicks: 0,
+    fileType: 'pdf'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/human-resources/Documents/fte-change-request-form.pdf',
+    name: 'FTE Change Request Form',
+    clicks: 0,
+    fileType: 'pdf'
+  },
+  {
+    url: 'https://mycon.ucdenver.edu/human-resources/Documents/position-initiation-form.pdf',
+    name: 'Position Initiation Form',
+    clicks: 0,
+    fileType: 'pdf'
+  }
+];
+
+

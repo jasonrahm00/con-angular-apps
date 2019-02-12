@@ -1,0 +1,75 @@
+<h2>Course Assignments</h2>
+
+<app-messages></app-messages>
+
+<div class="table-container" id="courseAssigns">
+  <table id="assignTable" class="margin-bottom-small">
+    <thead>
+      <tr>
+        <th>Edit</th>
+        <th>Course</th>
+        <th>Didactic Credit Hrs</th>
+        <th>Practice Credit Hrs</th>
+        <th>Coord Credit Hrs</th>
+        <th>Semester</th>
+        <th>Year</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let x of courseAssigns; let i = index" [ngSwitch]="assignToEdit.assignID">
+
+        <ng-template [ngSwitchCase]="x.assignID">
+          <td>
+            <a title="Save" class="fa fa-save fa-2x block cursor-pointer margin-bottom-x-small" (click)="saveAssignEdit()"></a>
+            <a title="Cancel Edit" class="fa fa-ban fa-2x block cursor-pointer" (click)="cancelAssignEdit()"></a>
+          </td>
+          <td>
+            <select [(ngModel)]="assignToEdit.courseID">
+              <option value="" selected disabled>--Select Course--</option>
+              <option *ngFor="let course of courseList$ | async" [ngValue]="course.courseID">{{ course.courseString }}</option>
+            </select>
+          </td>
+          <td><input type="text" value="{{ assignToEdit.didactic }}" [(ngModel)]="assignToEdit.didactic"></td>
+          <td><input type="text" value="{{ assignToEdit.practice }}" [(ngModel)]="assignToEdit.practice"></td>
+          <td><input type="text" value="{{ assignToEdit.coord }}" [(ngModel)]="assignToEdit.coord"></td>
+          <td>
+            <select [(ngModel)]="assignToEdit.semester">
+              <option value="" disabled selected>--Semester--</option>
+              <option value="Fall">Fall</option>
+              <option value="Summer">Summer</option>
+              <option value="Spring">Spring</option>
+            </select>
+          </td>
+          <td>
+            <select [(ngModel)]="assignToEdit.year">
+              <option value="" disabled selected>--Year--</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+            </select>
+          </td>
+          <td><input type="text" value="{{ assignToEdit.notes }}" [(ngModel)]="assignToEdit.notes"></td>
+        </ng-template>
+
+        <ng-template ngSwitchDefault>
+          <td>
+            <a title="Edit" class="fa fa-edit fa-2x block cursor-pointer margin-bottom-x-small" (click)="editAssign(x, i)"></a>
+            <a title="Delete" class="fa fa-trash fa-2x block cursor-pointer" (click)="deleteAssign(x, i)"></a>
+          </td>
+          <td>{{ x.courseString }}</td>
+          <td>{{ x.didactic }}</td>
+          <td>{{ x.practice }}</td>
+          <td>{{ x.coord }}</td>
+          <td>{{ x.semester }}</td>
+          <td>{{ x.year }}</td>
+          <td>{{ x.notes }}</td>
+        </ng-template>
+
+      </tr>
+
+      <tr add-row></tr>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+select {
+  width: 100%;
+}
+
+tr {
+  background: #fff;
+}
+
+td {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background: #87abe3;
+}
+
+td:first-child {
+  border-left: 2px solid #000;
+}
+
+td:nth-child(3) input,
+td:nth-child(4) input,
+td:nth-child(5) input {
+  width: 75px;
+}
+
+td:last-child {
+  border-right: 2px solid #000;
+}
+
+@media print {
+  td {
+    display: none;
+  } 
+}

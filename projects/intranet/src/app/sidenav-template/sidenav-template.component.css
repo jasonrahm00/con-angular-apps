@@ -1,0 +1,118 @@
+.ismobile .sidenav-container {
+  flex: 1 0 auto;
+}
+
+.sidenav-container {
+  flex: 1;
+}
+
+.mat-sidenav {
+  background-color: #000;
+  border-right: 4px solid #CFB87C;
+  word-wrap: break-word;
+  width: 300px;
+}
+
+.mat-toolbar {
+  background: #fff;
+  border-bottom: 4px solid #CFB87C;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.mat-toolbar > img {
+  height: 60px;
+  width: auto;
+}
+
+.mat-toolbar > button {
+  border: 0;
+}
+
+.mat-toolbar-single-row {
+  padding: 0 25px;
+}
+
+.mat-toolbar > button {
+  margin-right: 25px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#routerOutlet {
+  margin: 125px auto 50px;
+  max-width: 1480px;
+  padding: 0 50px;
+}
+
+
+/**********************************************************
+  Nav Styles
+**********************************************************/
+
+nav {
+
+  margin-top: 60px;
+}
+
+nav a,
+nav a:visited {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+}
+
+nav a:link,
+nav a:hover {
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #CFB87C;
+  border-radius: 2px;
+  color: #000;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav > ul {
+  padding: 0 20px;
+}
+
+nav .submenu {
+  display: none;
+  padding-left: 20px;
+  transform: translateX(-100%);
+}
+
+nav .submenu-trigger.active {
+  background-color: #CFB87C;
+  color: #000;
+}
+
+nav .submenu-trigger.active + .submenu {
+  display: block;
+  animation: slideIn .3s linear forwards;
+}
+
+nav .submenu-trigger.active > .mat-icon.arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@keyframes slideIn {
+  from {transform: translateX(-100%);}
+  to {transform: translateX(0%);}
+}

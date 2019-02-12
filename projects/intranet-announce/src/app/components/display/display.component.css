@@ -1,0 +1,29 @@
+:host {
+  border: 1px solid #ddd;
+  display: block;
+  height: 600px;
+  margin-right: 3rem;
+  overflow-y: scroll;
+  width: 520px;
+}
+
+.load-message {
+  display: table;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.load-message > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.load-message p {
+  color: #565a5c;
+  font-weight: bold;
+}
+
+.spinner {
+  margin: 0 auto;
+}

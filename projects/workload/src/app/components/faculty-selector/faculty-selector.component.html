@@ -1,0 +1,16 @@
+<h2>Faculty Member</h2>
+<div>
+  <ul>
+    <li>
+      <label for="facName">Name:
+        <select id="facName" name="facName" [(ngModel)]="chosenFaculty" (ngModelChange)="onChangeObj($event)">
+          <option value="" selected disabled>--Choose Faculty Member--</option>
+          <option *ngFor="let x of faculty$ | async" [ngValue]="x">{{ x.Name }}</option>
+        </select>
+      </label>
+    </li>
+    <li><strong>Employee ID:</strong> <span *ngIf="chosenFaculty">{{ chosenFaculty.EmployeeID }}</span></li>
+    <li><strong>Position:</strong> <span *ngIf="chosenFaculty">{{ chosenFaculty.Position }}</span></li>
+    <li><strong>Supervisor:</strong> <span *ngIf="chosenFaculty">{{ chosenFaculty.Supervisor }}</span></li>
+  </ul>
+</div>

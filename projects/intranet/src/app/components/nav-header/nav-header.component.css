@@ -1,0 +1,25 @@
+:host {
+  background: #fff;
+  display: block;
+  border-bottom: 4px solid #CFB87C;
+  width: 100%;
+}
+
+#brand img {
+  height: auto;
+  width: 100%;
+}
+
+#toolbar {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 15px ;
+  max-width: 1380px;
+  padding: 15px 15px 0;
+}
+
+#toolbar input {
+  margin-right: 10px;
+}

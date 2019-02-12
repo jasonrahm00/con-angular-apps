@@ -1,0 +1,50 @@
+body {
+  margin: 50px auto;
+  max-width: 1280px;
+  padding: 0 15px;
+}
+
+header img {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header > div {
+  text-align: center;
+  width: 100%;
+}
+
+main > * {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+main > div {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main > div > *:nth-child(2) {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  main > div {
+    justify-content: space-between;
+  }
+
+  main > div > *:nth-child(2) {
+    width: 25%;
+  }
+}
+
+@media print {
+  header,
+  main {
+    font-size: 75%;
+  }
+}
+

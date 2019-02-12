@@ -1,0 +1,36 @@
+#display {
+  border: 1px solid #ddd;
+  display: block;
+  height: 600px;
+  margin-right: 3rem;
+  overflow-y: scroll;
+  position: relative;
+  width: 520px;
+}
+
+#filters {
+  margin: 0;
+  width: 350px;
+}
+
+#loadingMessage {
+  display: table;
+  height: 100%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#loadingMessage > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#loadingMessage p {
+  color: #565a5c;
+  font-weight: bold;
+}
+
+#loadingMessage .spinner {
+  margin: 0 auto;
+}

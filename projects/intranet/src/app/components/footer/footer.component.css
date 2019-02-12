@@ -1,0 +1,35 @@
+footer {
+  background: #000;
+  border-top: 4px solid #CFB87C;
+  color: #fff;
+  padding: 25px;
+  width: 100%;
+}
+
+footer a:link,
+footer a:visited,
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer > div {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer > div > div {
+  margin-right: 15px;
+}
+
+footer > div > div:last-child {
+  margin-right: 0;
+}
+
+footer > div > div > span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}

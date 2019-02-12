@@ -1,0 +1,48 @@
+<header>
+  <div>
+    <img src="assets/con-logo.png" alt="CON Logo">
+  </div>
+
+  <h1>Fall 2018 - Summer 2019 Faculty Workload Form</h1>
+  <p>
+    {{ dateTime | date:'MM/dd/yyyy' }}<br>
+    {{ dateTime | date:'hh:mm a' }}
+  </p>
+</header>
+
+<main>
+
+  <div>
+    <app-faculty-selector></app-faculty-selector>
+    <app-fte-table></app-fte-table>
+  </div>
+
+  <app-funding-breakdown></app-funding-breakdown>
+
+  <app-course-assignments></app-course-assignments>
+
+  <section>
+    <h2>Comments</h2>
+
+    <div [ngSwitch]="commentToEdit.editing" *ngIf="empID">
+
+      <ng-template [ngSwitchCase]="true">
+        <textarea rows="8" cols="70" class="margin-bottom-x-small" [(ngModel)]="commentToEdit.comments">{{ commentToEdit.comments }}</textarea>
+        <div>
+          <button class="margin-right-x-small" (click)="saveComment()"><span class="fa fa-save"></span> Save Comments</button>
+          <button (click)="cancelEdit()"><span class="fa fa-ban"></span> Cancel Edit</button>
+        </div>
+      </ng-template>
+
+      <ng-template ngSwitchDefault>
+        <p>{{ globalComments.comments }}</p>
+        <button class="block" (click)="editComment()"><span class="fa fa-edit"></span> Edit Comments</button>
+      </ng-template>
+
+    </div>
+
+  </section>
+
+  <button (click)="print()"><span class="fa fa-print"></span> Print Record</button>
+
+</main>

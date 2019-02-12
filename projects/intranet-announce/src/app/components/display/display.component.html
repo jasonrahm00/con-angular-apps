@@ -1,0 +1,31 @@
+<div class="load-message" *ngIf="!dataLoaded && !loadError">
+  <div>
+    <p>Loading Announcements</p>
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<div class="load-message" *ngIf="loadError">
+  <div>
+    <p>Unable to Load Announcements</p>
+  </div>
+</div>
+
+<!--
+<div class="card"
+  data-ng-repeat="x in filteredAnnounce | orderBy:'-publishDate'"
+  data-ng-cloak
+  data-ng-if="dataLoaded">
+
+  <div class="card-header">
+    <img data-ng-src="/PublishingImages/icons/{{ x.category.icon}}-{{ x.category.color }}.png" alt="icon">
+    <span class="card-title">{{ x.title }}</span>
+    <span class="card-cat">{{ x.category.name }}</span>
+  </div>
+  <div class="card-content">
+    <span data-ng-bind-html="x.content | renderHTMLCorrectly"></span>
+    <span class="card-date">{{ x.publishDate | date: 'MMM dd, yyyy'}}</span>
+  </div>
+
+</div>
+-->

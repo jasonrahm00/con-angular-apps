@@ -1,0 +1,31 @@
+<h2>FTE Funding Breakdown</h2>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Funding Distrib%</th>
+        <th scope="col">CR HR Conversion</th>
+        <th scope="col">Category</th>
+        <th scope="col">Speed Type</th>
+        <th scope="col">Speed Type Description</th>
+        <th scope="col">Funding Begin</th>
+        <th scope="col">Funding End</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of fundingData.data">
+        <td>{{ x.fundPct }}</td>
+        <td>{{ x.teachCredExpec }}</td>
+        <td>{{ x.category }}</td>
+        <td>{{ x.speedTSype }}</td>
+        <td>{{ x.speedSTypeDescrip }}</td>
+        <td>{{ x.fundStart.date | date:'M/dd/yyyy' }}</td>
+        <td>{{ x.fundEnd.date | date:'M/dd/yyyy' }}</td>
+      </tr>
+      <tr *ngIf="fundingData.data.length > 0">
+        <td>{{ fundingData.pctTotal }}</td>
+        <td *ngIf="fundingData.crTotal > 0">{{ fundingData.crTotal }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

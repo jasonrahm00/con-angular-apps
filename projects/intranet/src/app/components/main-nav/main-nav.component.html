@@ -1,0 +1,37 @@
+<app-nav-header></app-nav-header>
+
+<nav>
+  <ul>
+    <li><a routerLink=""><mat-icon>home</mat-icon></a></li>
+    <li><a class="submenu-trigger"
+           (click)="toggleActive('departments')"
+           [class.active]="activeParent === 'departments' && active ? true : false">Departments <mat-icon>chevron_right</mat-icon></a>
+      <ul class="submenu">
+        <li><a>Academic Programs</a></li>
+        <li><a>Clinical Affairs</a></li>
+        <li><a>Budget and Finance</a></li>
+        <li><a>Facilities</a></li>
+        <li><a>Human Resources</a></li>
+        <li><a>Information Technology</a></li>
+        <li><a>Marketing</a></li>
+        <li><a>Faculty Affairs</a></li>
+        <li><a>Student Affairs</a></li>
+      </ul>
+    </li>
+    <li><a routerLink="forms" (click)="active = false">Forms</a></li>
+    <li><a>Directory</a></li>
+    <li><a>Dean's Office</a></li>
+    <li><a class="submenu-trigger" (click)="toggleActive('committees')" [class.active]="activeParent === 'committees' && active ? true : false">Standing Committees <mat-icon>chevron_right</mat-icon></a>
+      <ul class="submenu">
+        <li><a>Apt Committee</a></li>
+        <li><a>Graduate Curriculum and Evaluation</a></li>
+        <li><a>PhD Advisory Committee</a></li>
+        <li><a>Research Committee</a></li>
+        <li><a>Staff Governance Council</a></li>
+        <li><a>Undergraduate Curriculum and Evaluation Committee</a></li>
+      </ul>
+    </li>
+    <li><a>FAQs</a></li>
+  </ul>
+</nav>
+

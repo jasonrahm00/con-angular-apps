@@ -1,0 +1,43 @@
+<td>
+  <a title="Add" class="fa fa-plus fa-2x block cursor-pointer margin-bottom-x-small" (click)="addNewAssign()"></a>
+  <a title="Reset" class="fa fa-undo fa-2x block cursor-pointer" (click)="resetValues()"></a>
+</td>
+<td>
+  <select [(ngModel)]="chosenCourse" (ngModelChange)="courseChange($event)">
+    <option value="" disabled>--Select Course--</option>
+    <option *ngFor="let x of courseList$ | async" [ngValue]="x.courseID">{{ x.courseString }}</option>
+  </select>
+</td>
+
+<td>
+  <input type="text" placeholder="Didactic" [(ngModel)]="newAssign.didactic">
+</td>
+
+<td>
+  <input type="text" placeholder="Practice" [(ngModel)]="newAssign.practice">
+</td>
+
+<td>
+  <input type="text" placeholder="Coord" [(ngModel)]="newAssign.coord">
+</td>
+
+<td>
+  <select [(ngModel)]="newAssign.semester">
+    <option value="" disabled selected>--Semester--</option>
+    <option value="Fall">Fall</option>
+    <option value="Summer">Summer</option>
+    <option value="Spring">Spring</option>
+  </select>
+</td>
+
+<td>
+  <select [(ngModel)]="newAssign.year">
+    <option value="" disabled selected>--Year--</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+  </select>
+</td>
+
+<td>
+  <input placeholder="notes" [(ngModel)]="newAssign.notes">
+</td>

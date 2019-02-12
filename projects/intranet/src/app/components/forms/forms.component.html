@@ -1,0 +1,9 @@
+<h1>Forms and Documents</h1>
+<ul>
+  <li *ngFor="let x of documents; let i = index;">
+    <a href="{{ x.url }}" target="_blank" (click)="docClicked(i)">
+      <i title="Web{{ x.fileType }} Link" *ngIf="x.fileType === 'page'" class="fas fa-globe"></i>
+      <i title="{{ x.fileType.toUpperCase() }} document link" *ngIf="x.fileType !== 'page'" class="far fa-file-{{x.fileType}}"></i>{{ x.name }}</a>
+    <span>({{ x.clicks }})</span>
+  </li>
+</ul>

@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  display: block;
+  background: #88abe3;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid #000;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+
+a:hover {
+  border-color: #7C7E7F;
+}
+
+@media all and (min-width: 925px) {
+  ul {
+    width: 75%;
+  }
+}
