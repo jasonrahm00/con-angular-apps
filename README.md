@@ -1,2 +1,2 @@
 # con-angular-apps
-When I worked at the CU College of Nursing, I built a handful of custom UI Widgets to improve usability and make managing the site easier. The widgets were primarily built using AngularJS as that was the only framework that would interact with the CMS (Sharepoint 2007).
+When I worked at the CU College of Nursing, I had the opportunity to build a POC applications for faculty to manage their workload; I used Angular and PHP; this was my first foray into full-stack development. I also had a bit of downtime to tinker and built a few random applications using Angular. Though none of the applications in this repo were implemented, I did gain valuable practice and experience with the Angular framework.
